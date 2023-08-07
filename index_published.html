@@ -60,9 +60,15 @@
     }
 
     /* Adjust the video container width to 90% on mobile */
-    #video-container {
-      width: 90%;
+#video-container {
+      width: 100% !important;
+      padding-bottom: 57.25% !important;
     }
+
+#container {
+  padding:0 !important;
+  box-shadow: none !important;
+}
   }
 
   /* Style for the YouTube video container */
@@ -103,9 +109,12 @@ div#container {
   border-radius: 10px;
   padding: 20px;
   background: #FFF;
-  margin: 20px 0;
+margin: 20px 0;
 }
 
+ul#CHAPTERLIST {
+padding-left:0;
+}
 
 ul#CHAPTERLIST > li {
     font-size: 16px;
@@ -131,6 +140,7 @@ ul.contentitem{
     margin: 0.75em 0;
     padding: 0 1em;
     list-style: none;
+  padding-left:0;
   }
   ul.contentitem li::before { 
     content: "";
