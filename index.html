@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My Website</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+
+      /* Style for the chapters-container to display h1 and h2 chapters side by side on larger screens */
+      .chapters-container {
+        display: flex;
+        justify-content: space-between;
+        padding: 20px;
+      }
+
+      /* Style for the h1 chapters in a table */
+      .h1-chapters {
+        flex: 1;
+        padding-right: 20px;
+      }
+
+      /* Style for the h2 chapters in a column */
+      .h2-chapters {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        align-items: stretch;
+        flex: 1;
+      }
+
+      /* Style for each h2 chapter rounded button */
+      .rounded-button {
+        background-color: #007bff;
+        color: #fff;
+        border-radius: 25px;
+        padding: 10px 20px;
+        margin: 10px;
+        text-align: center;
+        cursor: pointer;
+        font-size: 20px;
+        font-weight: bold;
+      }
+
+      /* Style for h2-chapter content to be initially hidden */
+      .h2-chapter {
+        display: none;
+        padding: 10px;
+      }
+
+      /* Media query for mobile responsiveness */
+      @media (max-width: 768px) {
+        /* Change the layout to stack h1 and h2 chapters vertically on smaller screens */
+        .chapters-container {
+          flex-direction: column;
+        }
+        .h1-chapters,
+        .h2-chapters {
+          align-items: center;
+          width: 100%;
+          padding: 0;
+        }
+
+        /* Adjust the video container width to 90% on mobile */
+        #video-container {
+          width: 90%;
+        }
+      }
+
+      /* Style for the YouTube video container */
+      #video-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 0;
+        padding-bottom: 37.25%; /* 16:9 aspect ratio */
+        background-color: #f2f2f2;
+        width: 70%; /* Adjust the video container width to 70% */
+        margin: 0 auto; /* Center the video container horizontally */
+        overflow: hidden;
+        position: relative;
+      }
+
+      /* Style for the YouTube video player */
+      #youtube-player {
+        width: 100%; /* Make the video player responsive */
+        height: 100%; /* Make the video player take up the full container height */
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+    </style>
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://code.jquery.com/jquery-3.7.0.slim.min.js"
+      integrity="sha256-tG5mcZUtJsZvyKAxYLVXrmjKBVLd6VpVccqz/r4ypFE="
+      crossorigin="anonymous"
+    ></script>
+    <script src="script.js"></script>
+  </head>
+  <body>
+    <div id="container">
+      <div id="video-container">
+        <div id="youtube-player"></div>
+      </div>
+
+      <div class="chapters-container">
+        <div class="h1-chapters">
+          <ul id="CHAPTERLIST">
+            <li class="selected">Chapter 1. &nbsp;(2개의 강의)</li>
+            <li>Chapter 2. &nbsp;(3개의 강의)</li>
+          </ul>
+        </div>
+        <div class="h2-chapters">
+          <div class="contentlist selected">
+            <ul class="contentitem">
+              <li
+                class="selected"
+                data-movie="https://www.youtube.com/embed/nX_ZuOko_5A"
+              >
+                인스타그램 챌린지 1기 우수챌린지 피드백 CH1.
+              </li>
+              <li data-movie="https://www.youtube.com/embed/u_W9Hk5pFwc">
+                인스타그램 챌린지 1기 우수챌린지 컨설팅 CH1.
+              </li>
+            </ul>
+          </div>
+          <div class="contentlist">
+            <ul class="contentitem">
+              <li
+                class="selected"
+                data-movie="https://www.youtube.com/embed/nX_ZuOko_5A"
+              >
+                인스타그램 챌린지 1기 우수챌린지 피드백 CH2.
+              </li>
+              <li data-movie="https://www.youtube.com/embed/u_W9Hk5pFwc">
+                인스타그램 챌린지 1기 우수챌린지 컨설팅 CH2.
+              </li>
+              <li data-movie="https://www.youtube.com/embed/_j8DrwOUnNM">
+                김개발 공작소 - Hello World 란
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script></script>
+  </body>
+</html>
